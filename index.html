@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaserWitch3d | Corte Láser e Impresión 3D</title>
+    <meta name="description" content="Servicios premium de tallado láser e impresión 3D en filamento y resina.">
+    
+    <!-- Google Fonts: Outfit for modern, geometric look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <a href="index.html" style="display: flex; align-items: center;">
+                    <img src="assets/images/logo.png" alt="LaserWitch3d Logo" style="height: 40px; width: auto; border-radius: 5px;">
+                </a>
+                <h1><a href="index.html">Laser<span class="accent">Witch</span>3d</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <img src="assets/images/logo.png" width="240" height="243" alt=""/>
+                    
+                    <h2 class="glitch" data-text="Magia en cada detalle">Magia en cada detalle</h2>
+<p>Especialistas en <strong>Tallado Láser</strong> y <strong>Impresión 3D</strong> (Filamento y Resina). Transformamos tus ideas en realidad material con precisión milimétrica y acabados premium.</p>
+                    <div class="hero-actions">
+                        <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+                        <a href="#contacto" class="btn btn-secondary">Hacer un Pedido</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <h2 class="section-title">Nuestros <span class="accent">Servicios</span></h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon laser-icon"></div>
+                        <h3>Tallado y Corte Láser</h3>
+                        <p>Precisión absoluta en madera, acrílico, cuero y más. Personaliza cualquier producto con detalles intrincados y acabados quemados impecables.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon fdm-icon"></div>
+                        <h3>Impresión 3D Filamento (FDM)</h3>
+                        <p>Fabricación de piezas resistentes, prototipos funcionales y modelos a gran escala con una amplia variedad de materiales y colores.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon resin-icon"></div>
+                        <h3>Impresión 3D Resina</h3>
+                        <p>Calidad ultra-detallada para miniaturas, joyería y piezas que requieren una superficie lisa y perfecta que captura cada rasgo minúsculo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="productos" class="products">
+            <div class="container">
+                <h2 class="section-title">Trabajos <span class="accent">Destacados</span></h2>
+                <div class="products-grid" id="product-gallery">
+                    <!-- Category 1: 3D -->
+                    <a href="catalogo.html#creaciones-3d" class="product-card">
+                        <img src="assets/images/_DSC2310.JPG" alt="Creaciones 3D" loading="lazy">
+                        <div class="product-info">
+                            <h3>Creaciones 3D</h3>
+                            <p>Ver catálogo completo</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Category 2: Navidad -->
+                    <a href="catalogo.html#navidad" class="product-card">
+                        <img src="assets/images/IMG_20241224_103209.jpg" alt="Especial Navidad" loading="lazy">
+                        <div class="product-info">
+                            <h3>Especial Navidad</h3>
+                            <p>Ver catálogo completo</p>
+                        </div>
+                    </a>
+
+                    <!-- Category 3: Celebraciones -->
+                    <a href="catalogo.html#celebraciones" class="product-card">
+                        <img src="assets/images/Screenshot_2025-02-18-22-59-05-251_com.facebook.katana~2.jpg" alt="Artículos de Celebraciones" loading="lazy">
+                        <div class="product-info">
+                            <h3>Celebraciones</h3>
+                            <p>Ver catálogo completo</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="contact-card glass-panel">
+                    <h2 class="section-title">Haz tu <span class="accent">Magia</span> Realidad</h2>
+                    <p>Cuéntanos sobre tu proyecto. Ya sea un diseño personalizado o una idea en mente, nosotros nos encargamos de materializarlo.</p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu Nombre" required>
+                            <input type="email" placeholder="Tu Correo" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Servicio de interés...</option>
+                                <option value="laser">Corte / Tallado Láser</option>
+                                <option value="fdm">Impresión 3D - Filamento</option>
+                                <option value="resina">Impresión 3D - Resina</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Detalles del proyecto..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Laser<span class="accent">Witch</span>3d</h3>
+                <p>Artesanía tecnológica premium.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/laserwitch3d/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">WhatsApp</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 LaserWitch3d. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

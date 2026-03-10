@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | LaserWitch3d</title>
+    <meta name="description"
+        content="Catálogo completo de LaserWitch3d. Explora nuestras creaciones 3D, regalos de navidad y artículos de celebraciones.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .catalog-nav {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .catalog-hero {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <a href="index.html" style="display: flex; align-items: center;">
+                    <img src="assets/images/logo.png" alt="LaserWitch3d Logo"
+                        style="height: 40px; width: auto; border-radius: 5px;">
+                </a>
+                <h1><a href="index.html">Laser<span class="accent">Witch</span>3d</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="catalogo.html"
+                            style="color: var(--text-color); text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);">Catálogo</a>
+                    </li>
+                    <li><a href="index.html#contacto" class="btn-nav">Cotizar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Catalog Header -->
+        <section class="catalog-hero">
+            <div class="container">
+                <h2 class="glitch" data-text="Nuestro Catálogo">Nuestro Catálogo</h2>
+                <p>Explora nuestras categorías de productos terminados, cortados por láser o impresos en 3D.</p>
+
+                <div class="catalog-nav">
+                    <a href="#creaciones-3d" class="btn btn-secondary">Creaciones 3D</a>
+                    <a href="#navidad" class="btn btn-secondary">Especial Navidad</a>
+                    <a href="#celebraciones" class="btn btn-secondary">Celebraciones</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creaciones 3D -->
+        <section id="creaciones-3d" class="products">
+            <div class="container">
+                <h2 class="section-title">Creaciones <span class="accent">3D</span></h2>
+
+                <!-- Slider main container -->
+                <div class="swiper product-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20250106_172836538.jpg" alt="Pieza 3D Mecánica" loading="lazy">
+                            <div class="product-info">
+                                <h3>Pieza Mecánica</h3>
+                                <p>Filamento de alta resistencia</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20251027_180925821.jpg" alt="Impresión en Resina"
+                                loading="lazy">
+                            <div class="product-info">
+                                <h3>Impresión Resina</h3>
+                                <p>Alta resolución y detalle</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20250213_215807251.jpg" alt="Logo 3D" loading="lazy">
+                            <div class="product-info">
+                                <h3>Accesorio Decorativo</h3>
+                                <p>Corte Láser y 3D</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20240827_175819121.jpg" alt="Más 3D" loading="lazy">
+                            <div class="product-info">
+                                <h3>Pieza Personalizada 3D</h3>
+                                <p>Diseño exclusivo</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/_DSC2306.JPG" alt="Creacion 3D" loading="lazy">
+                            <div class="product-info">
+                                <h3>Modelo 3D</h3>
+                                <p>A medida</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20250204_223206042.jpg" alt="Creacion 3D" loading="lazy">
+                            <div class="product-info">
+                                <h3>Modelo 3D</h3>
+                                <p>A medida</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/stranger.jpeg" alt="Creacion 3D" loading="lazy">
+                            <div class="product-info">
+                                <h3>Modelo 3D</h3>
+                                <p>A medida</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- Pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Navidad -->
+        <section id="navidad" class="products" style="background: var(--bg-color);">
+            <div class="container">
+                <h2 class="section-title">Especial <span class="accent">Navidad</span></h2>
+                <div class="swiper product-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/IMG_20241224_103209.jpg" alt="Adorno 1" loading="lazy">
+                            <div class="product-info">
+                                <h3>Adorno Navideño</h3>
+                                <p>Estrella grabada</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20251215_205558445.jpg" alt="Adorno 2" loading="lazy">
+                            <div class="product-info">
+                                <h3>Adornos de Moda</h3>
+                                <p>Personalizados</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/IMG_20241208_201419.jpg" alt="Adorno 3" loading="lazy">
+                            <div class="product-info">
+                                <h3>Todo lo que Imagines</h3>
+                                <p>Único e irrepetible</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20251216_173624201.jpg" alt="Adorno 4" loading="lazy">
+                            <div class="product-info">
+                                <h3>Esfera Navidad</h3>
+                                <p>Corte Láser MDF</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20251216_220555126.jpg" alt="Adorno 5" loading="lazy">
+                            <div class="product-info">
+                                <h3>Decorativo de Mesa</h3>
+                                <p>Especial</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Celebraciones -->
+        <section id="celebraciones" class="products">
+            <div class="container">
+                <h2 class="section-title">Artículos de <span class="accent">Celebraciones</span></h2>
+                <div class="swiper product-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20241004_232233526.jpg" alt="Celebracion" loading="lazy">
+                            <div class="product-info">
+                                <h3>Topper para Pastel</h3>
+                                <p>Acrílico cortado a medida</p>
+                            </div>
+                            <img src="assets/images/PXL_20250323_193515845~2.jpg" alt="Celebracion" loading="lazy">
+                            <div class="product-info">
+                                <h3>Topper para Pastel</h3>
+                                <p>Acrílico cortado a medida</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/Screenshot_2025-02-18-22-59-05-251_com.facebook.katana~2.jpg"
+                                alt="Celebracion" loading="lazy">
+                            <div class="product-info">
+                                <h3>Recuerdos</h3>
+                                <p>Para bodas y quinceaños</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20250403_200905401.RAW-01.COVER~2.jpg" alt="Celebracion"
+                                loading="lazy">
+                            <div class="product-info">
+                                <h3>Regalos Invitados</h3>
+                                <p>MDF cortado a láser</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20250317_172902987.jpg" alt="Fiesta" loading="lazy">
+                            <div class="product-info">
+                                <h3>Decoración de Fiestas</h3>
+                                <p>Grabado Especial</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/IMG_20250225_232301.jpg" alt="Fiesta 2" loading="lazy">
+                            <div class="product-info">
+                                <h3>Centros de Mesa</h3>
+                                <p>Madera premium</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-card">
+                            <img src="assets/images/PXL_20250617_183227461.RAW-01.COVER~2.jpg" alt="Fiesta 3"
+                                loading="lazy">
+                            <div class="product-info">
+                                <h3>Letras 3D Gigs</h3>
+                                <p>Para fotos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action inside Catalog -->
+        <section class="contact" style="background: var(--bg-color-light);">
+            <div class="container">
+                <div class="contact-card glass-panel" style="max-width: 600px; padding: var(--spacing-md);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">¿Tienes un diseño propio?</h3>
+                    <p>Podemos fabricarlo para ti con la más alta calidad.</p>
+                    <a href="index.html#contacto" class="btn btn-primary">Solicitar Cotización</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Laser<span class="accent">Witch</span>3d</h3>
+                <p>Artesanía tecnológica premium.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/laserwitch3d/" target="_blank"
+                    rel="noopener noreferrer">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">WhatsApp</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 LaserWitch3d. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Interactive scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
