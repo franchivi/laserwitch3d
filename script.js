@@ -77,34 +77,37 @@ document.addEventListener('DOMContentLoaded', () => {
         return { lightbox, lightboxImg };
     };
 
-    const isCatalogPage = window.location.pathname.includes('catalogo.html');
+    const isCatalogPage = window.location.pathname.includes('catalogo');
     
     if (isCatalogPage) {
         // Initialize Swipers
-        const swipers = new Swiper('.product-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                // When window width is >= 640px
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
+        const swiperElements = document.querySelectorAll('.product-swiper');
+        swiperElements.forEach(el => {
+            new Swiper(el, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                pagination: {
+                    el: el.querySelector('.swiper-pagination') || '.swiper-pagination',
+                    clickable: true,
                 },
-                // When window width is >= 1024px
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
+                navigation: {
+                    nextEl: el.querySelector('.swiper-button-next') || '.swiper-button-next',
+                    prevEl: el.querySelector('.swiper-button-prev') || '.swiper-button-prev',
+                },
+                breakpoints: {
+                    // When window width is >= 640px
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    // When window width is >= 1024px
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
                 }
-            }
+            });
         });
 
         const { lightbox, lightboxImg } = createLightbox();

@@ -81,7 +81,7 @@
                 <div class="products-grid" id="product-gallery">
                     <!-- Category 1: 3D -->
                     <a href="catalogo.html#creaciones-3d" class="product-card">
-                        <img src="assets/images/_DSC2310.JPG" alt="Creaciones 3D" loading="lazy">
+                        <img src="assets/images/_dsc2310.jpg" alt="Creaciones 3D" loading="lazy">
                         <div class="product-info">
                             <h3>Creaciones 3D</h3>
                             <p>Ver catálogo completo</p>
@@ -90,7 +90,7 @@
                     
                     <!-- Category 2: Navidad -->
                     <a href="catalogo.html#navidad" class="product-card">
-                        <img src="assets/images/IMG_20241224_103209.jpg" alt="Especial Navidad" loading="lazy">
+                        <img src="assets/images/img_20241224_103209.jpg" alt="Especial Navidad" loading="lazy">
                         <div class="product-info">
                             <h3>Especial Navidad</h3>
                             <p>Ver catálogo completo</p>
@@ -99,7 +99,7 @@
 
                     <!-- Category 3: Celebraciones -->
                     <a href="catalogo.html#celebraciones" class="product-card">
-                        <img src="assets/images/Screenshot_2025-02-18-22-59-05-251_com.facebook.katana~2.jpg" alt="Artículos de Celebraciones" loading="lazy">
+                        <img src="assets/images/pxl_20250617_183227461.raw-01.cover_2.jpg" alt="Artículos de Celebraciones" loading="lazy">
                         <div class="product-info">
                             <h3>Celebraciones</h3>
                             <p>Ver catálogo completo</p>
@@ -115,21 +115,22 @@
                 <div class="contact-card glass-panel">
                     <h2 class="section-title">Haz tu <span class="accent">Magia</span> Realidad</h2>
                     <p>Cuéntanos sobre tu proyecto. Ya sea un diseño personalizado o una idea en mente, nosotros nos encargamos de materializarlo.</p>
-                    <form id="contact-form">
+                    <form id="contact-form" action="https://formsubmit.co/laserwitch3d@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Nuevo pedido o consulta - LaserWitch3d">
                         <div class="form-group">
-                            <input type="text" placeholder="Tu Nombre" required>
-                            <input type="email" placeholder="Tu Correo" required>
+                            <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                            <input type="email" name="email" placeholder="Tu Correo" required>
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select name="servicio" required>
                                 <option value="" disabled selected>Servicio de interés...</option>
-                                <option value="laser">Corte / Tallado Láser</option>
-                                <option value="fdm">Impresión 3D - Filamento</option>
-                                <option value="resina">Impresión 3D - Resina</option>
+                                <option value="Corte / Tallado Láser">Corte / Tallado Láser</option>
+                                <option value="Impresión 3D - Filamento">Impresión 3D - Filamento</option>
+                                <option value="Impresión 3D - Resina">Impresión 3D - Resina</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Detalles del proyecto..." rows="4" required></textarea>
+                            <textarea name="mensaje" placeholder="Detalles del proyecto..." rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
                     </form>
@@ -146,8 +147,8 @@
             </div>
             <div class="footer-links">
                 <a href="https://www.instagram.com/laserwitch3d/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">WhatsApp</a>
+
+                <a href="https://wa.me/34653418174" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
             <div class="footer-copy">
                 &copy; 2026 LaserWitch3d. Todos los derechos reservados.
