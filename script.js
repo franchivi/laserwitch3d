@@ -52,29 +52,39 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="lightbox" id="lightbox">
                 <span class="lightbox-close">&times;</span>
                 <img src="" alt="Ampliada" class="lightbox-img" id="lightbox-img">
+                <div class="lightbox-video-container" id="lightbox-video-container">
+                    <iframe id="lightbox-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+                </div>
             </div>
         `;
         document.body.insertAdjacentHTML('beforeend', lightboxTemplate);
         
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVideoContainer = document.getElementById('lightbox-video-container');
+        const lightboxVideo = document.getElementById('lightbox-video');
         const closeBtn = document.querySelector('.lightbox-close');
 
-        // Close on click close button
-        closeBtn.addEventListener('click', () => {
+        const closeLightbox = () => {
             lightbox.classList.remove('active');
-            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
-        });
+            setTimeout(() => { 
+                lightbox.style.display = 'none'; 
+                // Stop the video playing
+                lightboxVideo.src = "";
+            }, 300);
+        };
+
+        // Close on click close button
+        closeBtn.addEventListener('click', closeLightbox);
 
         // Close on click outside element
         lightbox.addEventListener('click', (e) => {
-            if (e.target !== lightboxImg) {
-                lightbox.classList.remove('active');
-                setTimeout(() => { lightbox.style.display = 'none'; }, 300);
+            if (e.target !== lightboxImg && !lightboxVideoContainer.contains(e.target)) {
+                closeLightbox();
             }
         });
 
-        return { lightbox, lightboxImg };
+        return { lightbox, lightboxImg, lightboxVideoContainer, lightboxVideo };
     };
 
     const isCatalogPage = window.location.pathname.includes('catalogo');
@@ -110,15 +120,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        const { lightbox, lightboxImg } = createLightbox();
+        const { lightbox, lightboxImg, lightboxVideoContainer, lightboxVideo } = createLightbox();
         
         // Add click events to all catalog product images, including duplicated swiper slides
         document.body.addEventListener('click', (e) => {
             const card = e.target.closest('.product-card');
             if (card) {
                 e.preventDefault();
-                const imgSource = card.querySelector('img').src;
-                lightboxImg.src = imgSource;
+                
+                const videoId = card.getAttribute('data-video-id');
+                if (videoId) {
+                    // Show video
+                    lightboxImg.style.display = 'none';
+                    lightboxVideoContainer.style.display = 'block';
+                    lightboxVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+                } else {
+                    // Show image
+                    const imgSource = card.querySelector('img').src;
+                    lightboxImg.src = imgSource;
+                    lightboxImg.style.display = 'block';
+                    lightboxVideoContainer.style.display = 'none';
+                }
+                
                 lightbox.style.display = 'flex';
                 setTimeout(() => { lightbox.classList.add('active'); }, 10);
             }
